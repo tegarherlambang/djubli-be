@@ -1,0 +1,450 @@
+{
+	"info": {
+		"_postman_id": "ebd06b6b-7397-4ebd-8bf6-fe49648cad13",
+		"name": "tes-djubli",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14039116",
+		"_collection_link": "https://galactic-capsule-585335.postman.co/workspace/big~4f2c2e08-c1ab-41bf-bed1-58243b601dc2/collection/14039116-ebd06b6b-7397-4ebd-8bf6-fe49648cad13?action=share&creator=14039116&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phone\":\"089696087041\",\r\n    \"password\":\"089696087041\",\r\n    \"name\":\"tegar\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/auth/register",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phone\":\"0873737373\",\r\n    \"password\":\"1234567890\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/auth/login",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "car",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "car_name",
+									"value": "agya",
+									"type": "text"
+								},
+								{
+									"key": "promotion_end_date",
+									"value": "2023-05-20",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "baru",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "12000",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "depok",
+									"type": "text"
+								},
+								{
+									"key": "mileage",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/skiad/Downloads/ic_category_product.png"
+								},
+								{
+									"key": "path",
+									"value": "car",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/car",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"car"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "car_name",
+									"value": "agya",
+									"type": "text"
+								},
+								{
+									"key": "promotion_end_date",
+									"value": "2023-05-20",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "baru",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "12000",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "depok",
+									"type": "text"
+								},
+								{
+									"key": "mileage",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/skiad/Downloads/ic_category_product.png"
+								},
+								{
+									"key": "path",
+									"value": "car",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "id",
+									"value": "29637107-7b59-4911-a488-0401b8b08e84",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/car",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"car"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/car/29637107-7b59-4911-a488-0401b8b08e84",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"car",
+								"29637107-7b59-4911-a488-0401b8b08e84"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by user id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/car/by-user-id?user_id=3d02b5a6-e939-4ea0-8718-6fe23f1dfa55",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"car",
+								"by-user-id"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "3d02b5a6-e939-4ea0-8718-6fe23f1dfa55"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/car",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"car"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/car/:id/detail",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"car",
+								":id",
+								"detail"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "4b64b0c8-81d2-41b0-a66c-3445111c23d5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "comment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"car_id\":\"4b64b0c8-81d2-41b0-a66c-3445111c23d5\",\r\n    \"comment\":\"jelek\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/car/comment",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"car",
+								"comment"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"jaya\",\r\n    \"phone\":\"0873737373\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/user",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "detail",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"jaya\",\r\n    \"phone\":\"0873737373\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/user/detail",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"user",
+								"detail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change password",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"old_password\":\"089696087041\",\r\n    \"password\":\"1234567890\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/user/change-password",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"user",
+								"change-password"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNkMDJiNWE2LWU5MzktNGVhMC04NzE4LTZmZTIzZjFkZmE1NSIsImlhdCI6MTY4ODYxMzA5NCwiZXhwIjoxNjg4NjU2Mjk0fQ.bJkfZ6Zr0q3pviPtTbzxIDqMbJEM6xOPZ8fl6G5KO1o",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	]
+}
